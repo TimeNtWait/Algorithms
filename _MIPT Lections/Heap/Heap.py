@@ -79,7 +79,6 @@ class A_Heap():
 		self.heap[id_max_child] = self.heap[-1]
 		self.heap.pop(-1)
 
-
 if __name__ == "__main__":
 	h = A_Heap()
 	print(f"levels: {h.levels()}")
