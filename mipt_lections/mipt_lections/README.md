@@ -1,0 +1,19 @@
+# Алгоритмы и структуры данных
+
+Алгоритмы и структуры, разработанные в рамках курса МФТИ "Алгоритмы и структуры данных"
+(https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
+
+Структуры данных:
+- Класс [Heap (Куча)](heap/)
+- Класс [Stack](stack/)
+
+Алгоритмы:
+- [Алгоритмы сортировки](sorting/)
+- [Ханойская башня](Hanoi_towers.py)  
+
+
+
+Тесты:
+- Pytest для всего кода: [tests](../tests/)
+- Doctest - для классов [Heap](mipt_lections/heap), [Stack](mipt_lections/stack)
+

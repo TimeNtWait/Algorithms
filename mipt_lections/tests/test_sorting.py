@@ -1,5 +1,5 @@
 import pytest
-from mipt_lections.mipt_lections.Sorting import Sort
+from Sorting.Sorting import Sort
 
 
 @pytest.fixture(scope="module")
