@@ -33,56 +33,60 @@ False
 >>> s1.is_empty()
 True
 """
+
+
 class Stack():
-	def __init__(self):
-		self.size = 0
-		self.stack = []
+    def __init__(self):
+        self.size = 0
+        self.stack = []
 
-	def push(self, item):
-		"""Добавляет элемент в стек
-		>>> s2 = Stack()
-		>>> s2.clear()
-		>>> s2.push(3)
-		0
-		>>> s2.len()
-		1
-		"""
-		self.stack.append(item)
-		self.size += 1
-		return self.size-1
+    def push(self, item):
+        """Добавляет элемент в стек
+        >>> s2 = Stack()
+        >>> s2.clear()
+        >>> s2.push(3)
+        0
+        >>> s2.len()
+        1
+        """
+        self.stack.append(item)
+        self.size += 1
+        return self.size - 1
 
-	def is_empty(self):
-		return self.size == 0
+    def is_empty(self):
+        return self.size == 0
 
-	def pop(self):
-		"""Удаляет элемент из стека
-		>>> s2 = Stack()
-		>>> s2.push(3)
-		0
-		>>> s2.pop()
-		3
-		>>> s2.len()
-		0
-		"""
-		if self.is_empty():
-			return None
-		item = self.stack.pop()
-		self.size -= 1
-		return item
+    def pop(self):
+        """Удаляет элемент из стека
+        >>> s2 = Stack()
+        >>> s2.push(3)
+        0
+        >>> s2.pop()
+        3
+        >>> s2.len()
+        0
+        """
+        if self.is_empty():
+            return None
+        item = self.stack.pop()
+        self.size -= 1
+        return item
 
-	def len(self):
-		return self.size
+    def len(self):
+        return self.size
 
-	def top(self):
-		return self.stack[-1]
+    def top(self):
+        return self.stack[-1]
 
-	def clear(self):
-		self.stack.clear()
-		self.size = 0
+    def clear(self):
+        self.stack.clear()
+        self.size = 0
 
-	def __repr__(self):
-		return f"{' '.join([str(x) for x in self.stack ]) }"
+    def __repr__(self):
+        return f"{' '.join([str(x) for x in self.stack])}"
+
 
 if __name__ == "__main__":
-	import doctest
-	doctest.testmod(verbose=True)
+    import doctest
+
+    doctest.testmod(verbose=True)
