@@ -4,6 +4,12 @@
 Необходимо перенести все блины с первого штыря на 2ой, при этом можно
 пользоваться третим штырем как буферным, однако нельзя ставить блины большого
 размера на блины меньшего размера.
+>>> calc_hanoy_tower(2)
+[1, 2]
+>>> calc_hanoy_tower(3)
+[1, 2, 3]
+>>> calc_hanoy_tower(4)
+[1, 2, 3, 4]
 """
 
 
@@ -18,11 +24,10 @@ def hanoy_tower(count, from_tower, to_tower, buf):
 
 def calc_hanoy_tower(n):
     to_tower = hanoy_tower(n, from_tower=[i + 1 for i in range(n)], to_tower=[], buf=[])
-    print(to_tower)
     return to_tower
 
 
 if __name__ == "__main__":
-    calc_hanoy_tower(2)
-    calc_hanoy_tower(3)
-    calc_hanoy_tower(4)
+    import doctest
+    doctest.testmod(verbose=True)
+    print(calc_hanoy_tower(3))
