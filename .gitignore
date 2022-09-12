@@ -1,4 +1,7 @@
 .gitignore
-Pipfile
-/.idea/
 
+Pipfile
+Pipfile.lock
+/.idea/
+temp/
+test/.pytest_cache/
