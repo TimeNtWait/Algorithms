@@ -17,7 +17,8 @@
     - Быстрая сортировкаа по методу Тони Хоара
     - Сортировка слиянием (слияние отсортированных массивов)
 - [Ханойская башня](mipt_lections)
- 
+- [Бинарный поиск элемента в массиве](binary_search.py)
+
 Тесты:
 - Pytest для всего кода: [tests](tests/)
 - Doctest - для классов [Heap](mipt_lections/heap), [Stack](mipt_lections/stack)
