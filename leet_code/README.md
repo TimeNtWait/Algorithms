@@ -2,7 +2,7 @@
 https://leetcode.com
 
 ## Hard Tasks 
-### **65.** Valid Number (Runtime 98.8%)
+### [**65.** Valid Number](hard_tasks/Task_LC_65.py) (Runtime 98.8%)
     https://leetcode.com/problems/valid-number/submissions/
     Действительный номер
 
