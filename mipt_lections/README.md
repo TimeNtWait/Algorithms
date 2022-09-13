@@ -19,6 +19,7 @@
 - [Ханойская башня](mipt_lections/hanoi_towers.py)
 - [Бинарный поиск элемента в массиве](mipt_lections/binary_search.py)
 
+
 Тесты:
 - Pytest для всего кода: [tests](tests/)
 - Doctest - для классов [Heap](mipt_lections/heap), [Stack](mipt_lections/stack)
