@@ -1,8 +1,10 @@
 # Алгоритмы и структуры данных
 
-## 1. [Алгоритмы и структуры](mipt_lections/mipt_lections/). В рамках курса МФТИ "Алгоритмы и структуры данных":
+## 1. [Алгоритмы и структуры](mipt_lections/mipt_lections/), разработанные в рамках курса МФТИ:
 - Структура данных [Heap (Куча)](mipt_lections/mipt_lections/heap)
-- Структура данных  [Stack](mipt_lections/mipt_lections/stack)
+- Структура данных [Stack](mipt_lections/mipt_lections/stack)
+- Структура данных [LinkedList (Односвязный список)](mipt_lections/mipt_lections/hash/linkedlist.py)
+- Структура данных [Hash (Hash-таблица)](mipt_lections/mipt_lections/hash/hash.py)
 - [Алгоритмы](mipt_lections/mipt_lections/) (алгоритмы сортировки, обработки и поиска ) 
 - [Тесты](mipt_lections/tests):
     - Pytest для всего кода
