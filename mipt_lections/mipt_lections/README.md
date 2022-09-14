@@ -4,8 +4,10 @@
 (https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
 
 Структуры данных:
-- Класс [Heap (Куча)](heap/)
-- Класс [Stack](stack/)
+- [Heap (Куча)](heap)
+- [Stack (Стэк)](stack)
+- [LinkedList (Односвязный список)](hash/linkedlist.py)
+- [Hash (Hash-таблица)](hash/hash.py)
 
 Алгоритмы:
 - [Алгоритмы сортировки](sorting/)

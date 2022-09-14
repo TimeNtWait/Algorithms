@@ -4,11 +4,11 @@
 (https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
 
 Структуры данных:
-- Класс [Heap (Куча)](mipt_lections/heap)
-- Класс [Stack](mipt_lections/stack)
-LinkList (LinkedList)
-Hash
-Graph
+- [Heap (Куча)](mipt_lections/heap)
+- [Stack (Стэк)](mipt_lections/stack)
+- [LinkedList (Односвязный список)](mipt_lections/hash/linkedlist.py)
+- [Hash (Hash-таблица)](mipt_lections/hash/hash.py)
+- Graph
 
 Алгоритмы:
 - [Алгоритмы сортировки](mipt_lections/sorting) 
