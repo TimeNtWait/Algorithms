@@ -1,4 +1,4 @@
-# Solved Algorithms fromm LeetCode
+# Solved Algorithms from LeetCode
 https://leetcode.com
 
 ## Hard Tasks 
