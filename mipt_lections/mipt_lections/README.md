@@ -28,5 +28,5 @@
 
 Тесты:
 - Pytest для всего кода: [tests](../tests/)
-- Doctest - для классов [Heap](mipt_lections/heap), [Stack](mipt_lections/stack)
+- Doctest - внутри классов [Heap](heap), [Stack](stack), [LinkedList](hash/linkedlist.py), [Hash](hash/hash.py)
 
