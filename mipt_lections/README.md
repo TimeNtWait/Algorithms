@@ -6,6 +6,9 @@
 Структуры данных:
 - Класс [Heap (Куча)](mipt_lections/heap)
 - Класс [Stack](mipt_lections/stack)
+LinkList (LinkedList)
+Hash
+Graph
 
 Алгоритмы:
 - [Алгоритмы сортировки](mipt_lections/sorting) 
