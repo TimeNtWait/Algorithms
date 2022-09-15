@@ -1,5 +1,5 @@
 import pytest
-from mipt_lections.stack.stack import Stack
+from mipt_lections.mipt_lections.stack.stack import Stack
 
 
 @pytest.fixture(scope="module")

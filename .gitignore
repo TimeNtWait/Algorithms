@@ -4,4 +4,4 @@ Pipfile
 Pipfile.lock
 /.idea/
 temp/
-tests/.pytest_cache/
+mipt_lections/tests/.pytest_cache/

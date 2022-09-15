@@ -24,15 +24,15 @@ True
 """
 from linkedlist import LinkedList
 
-# Размер hash таблицы. Должен быть соизмеримо больше. Рекомендуемый размер: в
-# 1.3 раза больше максимального кол-ва ключей хранимых в таблице
-HASH_SIZE = 256
-
 
 class HashTable():
-    def __init__(self):
+    def __init__(self, hash_size=256):
+        # Размер hash таблицы. Должен быть соизмеримо больше. Рекомендуемый размер: в
+        # 1.3 раза больше максимального кол-ва ключей хранимых в таблице,
+        # по умолчанию hash_size=256
+        self.hash_size = hash_size
         # Каждый элемент hash-таблицы представляет из себя односвязанный список
-        self.table = [LinkedList() for _ in range(HASH_SIZE)]
+        self.table = [LinkedList() for _ in range(self.hash_size)]
 
     def add(self, value: int):
         """Добавление элемента в hash-таблицу с предварительным расчетом хэша"""
@@ -53,15 +53,15 @@ class HashTable():
         Требования:
         - Соблюдение однозначности, т.е. для одних тех же входных данных должен
         быть рассчитан одинаковый хэш
-        - Итоговый хэш должен лежать в рамках допустимого значения HASH_SIZE
-        для этого от итогового хэша берется отсаток от HASH_SIZE
+        - Итоговый хэш должен лежать в рамках допустимого значения hash_size
+        для этого от итогового хэша берется отсаток от self.hash_size
         """
         value = abs(value) * 54321
         h_key = 123456
         while value > 0:
             h_key = h_key + 3 * value % 10
             value = value // 10
-        return int(h_key) % HASH_SIZE
+        return int(h_key) % self.hash_size
 
     def __str__(self) -> str:
         return f"{self.table}"

@@ -8,6 +8,7 @@
 - [Stack (Стэк)](stack)
 - [LinkedList (Односвязный список)](hash/linkedlist.py)
 - [Hash (Hash-таблица)](hash/hash.py)
+- [Graph (Граф)](graphs/graphs.py)
 
 Алгоритмы:
 - [Алгоритмы сортировки](sorting/)
@@ -22,6 +23,9 @@
 - [Бинарный поиск элемента в массиве](binary_search.py)
 - [Задача про короля](king.py)
 - [Редакционное расстояния между строками (Расстояние Левенштейна)](compare_words.py)
+- [Алгоритм Косарайю](graphs/algo_Kosaraju.py)
+- [Алгоритм Тарьяна. Топологическая сортировка вершин](graphs/algo_Tarjan.py)
+- [Нумерация всех вершин по порядку уровней](graphs/numbering_vertex.py)
 
 
 

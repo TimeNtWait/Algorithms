@@ -1,5 +1,5 @@
 import pytest
-from mipt_lections.heap.heap import Heap
+from mipt_lections.mipt_lections.heap.heap import Heap
 
 
 @pytest.fixture(scope="module")
@@ -22,4 +22,3 @@ def test_heap(create_heap):
     heap.push(-1)
     heap.push(12)
     print(heap)
-
