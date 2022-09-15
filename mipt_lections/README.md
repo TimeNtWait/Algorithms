@@ -8,7 +8,7 @@
 - [Stack (Стэк)](mipt_lections/stack)
 - [LinkedList (Односвязный список)](mipt_lections/hash/linkedlist.py)
 - [Hash (Hash-таблица)](mipt_lections/hash/hash.py)
-- [Graph (Граф)](mipt_lections/graphs/graphs.py)
+- [Graph (Граф)](mipt_lections/graph/graph.py)
 
 Алгоритмы:
 - [Алгоритмы сортировки](mipt_lections/sorting) 
@@ -22,9 +22,9 @@
 - [Ханойская башня](mipt_lections/hanoi_towers.py)
 - [Бинарный поиск элемента в массиве](mipt_lections/binary_search.py)
 - [Редакционное расстояния между строками (Расстояние Левенштейна)](mipt_lections/compare_words.py)
-- [Алгоритм Косарайю](mipt_lections/graphs/algo_Kosaraju.py)
-- [Алгоритм Тарьяна. Топологическая сортировка вершин](mipt_lections/graphs/algo_Tarjan.py)
-- [Нумерация всех вершин по порядку уровней](mipt_lections/graphs/numbering_vertex.py)
+- [Алгоритм Косарайю. Поиск компонент сильной связности](mipt_lections/graph/algo_Kosaraju_connected_components.py)
+- [Алгоритм Тарьяна. Топологическая сортировка вершин](mipt_lections/graph/algo_Tarjan_sort_vertexes.py)
+- [Нумерация всех вершин по порядку уровней](mipt_lections/graph/numbering_vertex.py)
 - Задача по укладке рюкзака
 
 

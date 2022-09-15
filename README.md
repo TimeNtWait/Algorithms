@@ -5,7 +5,7 @@
 - Структура данных [Stack](mipt_lections/mipt_lections/stack)
 - Структура данных [LinkedList (Односвязный список)](mipt_lections/mipt_lections/hash/linkedlist.py)
 - Структура данных [Hash (Hash-таблица)](mipt_lections/mipt_lections/hash/hash.py)
-- Структура данных [Graph (Граф)](mipt_lections/mipt_lections/graphs/graphs.py)
+- Структура данных [Graph (Граф)](mipt_lections/mipt_lections/graph/graph.py)
 - [Алгоритмы](mipt_lections/mipt_lections/) (алгоритмы сортировки, обработки и поиска ) 
 - [Тесты](mipt_lections/tests):
     - Pytest для всего кода
