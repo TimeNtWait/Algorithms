@@ -43,19 +43,25 @@ True
 
 
 class Graph():
-    def __init__(self, oriented=False):
+    def __init__(self, oriented: bool = False, weighed: bool = False):
         """
         :param oriented: - ориентированный граф или нет. Влияет на формирование
         графа: если граф ориентированный - ребра добавляются в строго указанном
         порядке от вершины v1 к v2, если граф неориентированный - ребра 
         добавляются в обе стороны, как от вершины v1 к v2 так и от v2 к v1.
         Для ориентированного графа допустим расчет развернутого графа reverse()
+        :param weighed: Учитываются лив графе веса
         """
         self.graph = {}
         self.oriented = oriented
+        self.weighed = weighed
 
     # Формируется ориентированый граф из строки
     def graph_from_string(self, string: str):
+        # Если указан весовой граф, то используем парсер с весами
+        if self.weighed:
+            self.graph_from_string_weight(string)
+            return
         for row in string.split("\n"):
             if row.strip() == "":
                 continue
@@ -63,21 +69,52 @@ class Graph():
             for v1, v2 in [(vertex1, vertex2)]:
                 self.add_edge(v1, v2)
 
-    # Добавление ребер в граф
-    def add_edge(self, v1, v2):
-        self._add_edge_in_graph(self.graph, v1, v2)
-        # Для неориентированнлого графа ребра добавляются в обе стороны
-        if not self.oriented:
-            self._add_edge_in_graph(self.graph, v2, v1)
+    # Формируется ориентированый граф из строки
+    def graph_from_string_weight(self, string: str):
+        for row in string.split("\n"):
+            if row.strip() == "":
+                continue
+            vertex1, vertex2, weight = row.strip().split(" ")
+            weight = float(weight)
+            for v1, v2 in [(vertex1, vertex2)]:
+                self.add_edge(v1, v2, weight)
 
     # Добавление ребер в граф
-    def _add_edge_in_graph(self, graph, v1, v2):
-        if v1 in graph:
-            graph[v1].add(v2)
+    def add_edge(self, v1, v2, weight=None):
+        self._add_edge_in_graph(v1, v2, weight)
+        # Для неориентированнлого графа ребра добавляются в обе стороны
+        if not self.oriented:
+            self._add_edge_in_graph(v2, v1, weight)
+
+    # Добавление ребер в граф
+    def _add_edge_in_graph(self, v1, v2, weight=None):
+        # Если формируем взвешанный граф, то добавляем веса в ребра
+        # Для взвешанного графа ребра хранятся в словаре (dict) с записью веса
+        if self.weighed:
+            # Если вес для ребра не указан, тогда указываем 0
+            if weight is None:
+                weight = 0
+            if v1 in self.graph:
+                self.graph[v1][v2] = weight
+            else:
+                self.graph[v1] = {}
+                self.graph[v1][v2] = weight
+            if v2 not in self.graph:
+                self.graph[v2] = {}
+            # для взвешанного графа указываем расстояние вершины до самой себя,
+            # даже если изначально не было задано такое расстояние
+            if v1 not in self.graph[v1]:
+                self.graph[v1][v1] = 0
+            if v2 not in self.graph[v2]:
+                self.graph[v2][v2] = 0
+        # Для НЕвзвешанного графа ребра хранятся в виде множества (set)
         else:
-            graph[v1] = {v2}
-        if v2 not in graph:
-            graph[v2] = set()
+            if v1 in self.graph:
+                self.graph[v1].add(v2)
+            else:
+                self.graph[v1] = {v2}
+            if v2 not in self.graph:
+                self.graph[v2] = set()
 
     # Формируется обратно-ориентированый граф, когда все направления векторов
     # развернуты в обратную сторону. Обратно-ориентированный граф необходим,
@@ -130,7 +167,7 @@ class Graph():
         топологическом порядке
 
         :param vertex: вершина по которой производится поиск в глубину
-        :param visited_vertex: посещенные вершины
+        :param visited: посещенные вершины
         :param sorted_vertex: ссылка на список в который добавляются вершины
 
         В классической версией алгоритма используется такое понятие как раскрашивание
@@ -173,6 +210,7 @@ class Graph():
 
     def __repr__(self):
         return f"{__class__}, oriented:{self.oriented}, data:{self.graph}"
+
 
 if __name__ == "__main__":
     import doctest

@@ -1,8 +1,10 @@
 """Тестирование класса Graph
 Тестирование производится за счет прогона алгоритмов по работе с графами:
-- Алгоритм Косарайю (algo_Kosaraju_connected_components.py)
-- Алгоритм Тарьяна (algo_Kosaraju_connected_components.py)
-- Нумерация всех вершин по порядку уровней (numbering_vertex.py)
+- Алгоритм Косарайю (algo_Kosaraju_connected_components.py) - DFS
+- Алгоритм Тарьяна (algo_Kosaraju_connected_components.py) - DFS
+- Нумерация всех вершин по порядку уровней (numbering_vertex.py) - DFS
+- Алгоритм Дейкстры (algo_Dijkstra_find_min_path.py) - BFS
+- Алгоритм Флойда-Уоршелла (algo_Floyd_Warshall_find_min_path.py)
 
 """
 import pytest
@@ -11,6 +13,7 @@ from mipt_lections.mipt_lections.graph.algo_Kosaraju_connected_components import
 from mipt_lections.mipt_lections.graph.algo_Tarjan_sort_vertexes import *
 from mipt_lections.mipt_lections.graph.numbering_vertex import *
 from mipt_lections.mipt_lections.graph.algo_Dijkstra_find_min_path import *
+from mipt_lections.mipt_lections.graph.algo_Floyd_Warshall_find_min_path import *
 
 
 def test_graph_algo_kosaraju():
@@ -88,3 +91,69 @@ def test_graph_algo_dijkstra():
                'F': {'len': 3}, 'LP': {'len': 4}, 'E': {'len': 4}},
         'A': {'A': {'len': 0}, 'D': {'len': 1}, 'C': {'len': 1}, 'B': {'len': 1}, 'G': {'len': 2}, 'KL': {'len': 2},
               'F': {'len': 2}, 'LP': {'len': 2}, 'J': {'len': 3}, 'E': {'len': 3}}}
+
+def test_graph_algo_dijkstra_weight():
+    print(f"\n Test Algorithms Dijkstra Weight")
+    string = """A B 1\nA C 2\nB D 3\nC D 4\n"""
+    graph_weight = Graph(oriented=True, weighed=True)
+    graph_weight.graph_from_string(string)
+
+    # Проверка с конкретно заданной вершиной и с парметром сохранения пути (save_path=True)
+    find_length_for_A_weight = calc_algo_dijkstra_weights(graph_weight,"A")
+    print(f"find_length_for_A_weight : {find_length_for_A_weight}")
+    assert find_length_for_A_weight == {'A': {'len': 0, 'path': ['A']}, 'B': {'len': 1.0, 'path': ['A', 'B']}, 'C': {'len': 2.0, 'path': ['A', 'C']}, 'D': {'len': 4.0, 'path': ['A', 'B', 'D']}}
+
+
+def test_graph_algo_floyd_warshall():
+    print(f"\n Test Algorithms Floyd-Warshall")
+    input_string = """
+    A B 2
+    B C 3
+    A D 4
+    D B 5
+    """
+    # Ориентированный граф
+    graph = Graph(oriented=True, weighed=True)
+    graph.graph_from_string(input_string)
+    matrix_distance = calc_algo_floyd_warshall(graph)
+    print("\nmatrix_distance for Orient graph", *matrix_distance, sep="\n")
+    assert matrix_distance == [[0, 2.0, None, 4.0], [2.0, 0, 3.0, 5.0], [None, 3.0, 0, None],[4.0, 5.0, None, 0]]
+
+    # Неориентированный граф
+    graph = Graph(oriented=False, weighed=True)
+    graph.graph_from_string(input_string)
+    matrix_distance = calc_algo_floyd_warshall(graph)
+    print("\nmatrix_distance for Not orient graph", *matrix_distance, sep="\n")
+    assert matrix_distance == [[0, 2.0, 5.0, 4.0],[2.0, 0, 3.0, 5.0],[5.0, 3.0, 0, 8.0],[4.0, 5.0, 8.0, 0]]
+
+
+    # TODO: добавить дополнительные алгоритмы поиска на графах https://ru.wikipedia.org/wiki/Категория:Алгоритмы_поиска_на_графах
+    # TODO: реализовать Двунаправленный поиск
+    # TODO: реализовать Лучевой поиск
+    # TODO: Лексикографический поиск в ширину
+    # TODO: Поиск в ширину
+    # TODO: Поиск по критерию стоимости
+    # TODO: Поиск в глубину
+    # TODO: Поиск с возвратом
+    # TODO: Поиск восхождением к вершине
+    # TODO: Поиск с ограничением глубины
+    # TODO: Поиск в глубину с итеративным углублением
+    # TODO: Breadth-First-Search-Algorithm
+    # TODO: Альфа-бета-отсечение
+    # TODO: Метод ветвей и границ
+    # TODO: Поиск по первому наилучшему совпадениюA*B*D*
+    # TODO: Поиск точки переходаIDA*
+    # TODO: Рекурсивный поиск по первому наилучшему совпадениюSMA*
+    # TODO: Волновой алгоритм
+    # TODO: Алгоритм Беллмана — Форда
+    # TODO: Алгоритм Джонсона
+    # TODO: Алгоритм Левита
+    # TODO: Поиск по краям
+    # TODO: Минимальное остовное дерево
+    # TODO: Алгоритм Борувки
+    # TODO: Алгоритм Прима
+    # TODO: Алгоритм Краскала
+    # TODO: Алгоритм Британского музея
+    # TODO: Алгоритм Эдмондса
+    # TODO: Обход дерева
+    # TODO: Алгоритм ближайшего соседа в задаче коммивояжёра

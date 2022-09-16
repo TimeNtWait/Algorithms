@@ -23,10 +23,13 @@
 - [Бинарный поиск элемента в массиве](binary_search.py)
 - [Задача про короля](king.py)
 - [Редакционное расстояния между строками (Расстояние Левенштейна)](compare_words.py)
-- [Алгоритм Косарайю (DFS). Поиск компонент сильной связности](graph/algo_Kosaraju_connected_components.py)
-- [Алгоритм Тарьяна (DFS). Топологическая сортировка вершин](graph/algo_Tarjan_sort_vertexes.py)
-- [Нумерация всех вершин по порядку уровней (DFS)](graph/numbering_vertex.py)
-- [Алгоритм Дейкстры (BFS). Поиска кратчайшего пути в графе](graph/algo_Dijkstra_find_min_path.py)
+- Алгоритмы по работе с графами:
+    - [Алгоритм Косарайю (DFS). Поиск компонент сильной связности](graph/algo_Kosaraju_connected_components.py)
+    - [Алгоритм Тарьяна (DFS). Топологическая сортировка вершин](graph/algo_Tarjan_sort_vertexes.py)
+    - [Нумерация всех вершин по порядку уровней (DFS)](graph/numbering_vertex.py)
+    - [Алгоритм Дейкстры (BFS). Поиска кратчайшего пути в графе](graph/algo_Dijkstra_find_min_path.py)
+    - [Алгоритм Флойда-Уоршелла. Поиска кратчайшего пути в графе](graph/algo_Floyd_Warshall_find_min_path.py)
+    - [Поиск кратчайшеего пути хождения шахматного Коня](chess_horse.py)
 
 Тесты:
 - Pytest для всего кода: [tests](../tests/)
