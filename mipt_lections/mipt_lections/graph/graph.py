@@ -168,6 +168,11 @@ class Graph():
                     vertexes.remove(child)
         return vertexes
 
+    def __str__(self):
+        return f"{self.graph}"
+
+    def __repr__(self):
+        return f"{__class__}, oriented:{self.oriented}, data:{self.graph}"
 
 if __name__ == "__main__":
     import doctest

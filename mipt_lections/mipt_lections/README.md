@@ -23,14 +23,12 @@
 - [Бинарный поиск элемента в массиве](binary_search.py)
 - [Задача про короля](king.py)
 - [Редакционное расстояния между строками (Расстояние Левенштейна)](compare_words.py)
-- [Алгоритм Косарайю. Поиск компонент сильной связности](graph/algo_Kosaraju_connected_components.py)
-- [Алгоритм Тарьяна. Топологическая сортировка вершин](graph/algo_Tarjan_sort_vertexes.py)
-- [Нумерация всех вершин по порядку уровней](graph/numbering_vertex.py)
-
-
-
+- [Алгоритм Косарайю (DFS). Поиск компонент сильной связности](graph/algo_Kosaraju_connected_components.py)
+- [Алгоритм Тарьяна (DFS). Топологическая сортировка вершин](graph/algo_Tarjan_sort_vertexes.py)
+- [Нумерация всех вершин по порядку уровней (DFS)](graph/numbering_vertex.py)
+- [Алгоритм Дейкстры (BFS). Поиска кратчайшего пути в графе](graph/algo_Dijkstra_find_min_path.py)
 
 Тесты:
 - Pytest для всего кода: [tests](../tests/)
-- Doctest - внутри классов [Heap](heap), [Stack](stack), [LinkedList](hash/linkedlist.py), [Hash](hash/hash.py)
+- Doctest - внутри классов [Heap](heap), [Stack](stack), [LinkedList](hash/linkedlist.py), [Hash](hash/hash.py), [Graph](graph/graph.py)
 
