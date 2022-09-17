@@ -60,6 +60,9 @@ def calc_algo_dijkstra(graph: Graph, root_vertex: str = None, save_path: bool = 
 
 
 def calc_algo_dijkstra_weights(graph: Graph, root_vertex: str = None, save_path: bool = False):
+    # алгоритм Дейкстры не может работать с отрицательными весами,
+    # поэтому делаем предварительную проверку весов
+    check_positive_weight(graph)
     # Если корневая вершина не задана, то определяем все верхние корневые
     if root_vertex:
         root_vertexes = [root_vertex]
@@ -70,17 +73,27 @@ def calc_algo_dijkstra_weights(graph: Graph, root_vertex: str = None, save_path:
             root_vertexes = graph.graph.keys()
     for root in root_vertexes:
         queue = deque([root])
-        root_length = {root: {"len":0, "path":[root]}}
+        root_length = {root: {"len": 0}}
+        if save_path:
+            root_length[root]["path"] = []
         while queue:
             parent = queue.popleft()
             for child in graph.graph[parent]:
-                if child not in root_length or root_length[child]["len"] > (root_length[parent]["len"] + graph.graph[parent][child]):
+                if child not in root_length or root_length[child]["len"] > (
+                        root_length[parent]["len"] + graph.graph[parent][child]):
                     root_length[child] = {}
                     root_length[child]["len"] = root_length[parent]["len"] + graph.graph[parent][child]
-                    root_length[child]["path"] = root_length[parent]["path"] + [child]
+                    if save_path:
+                        root_length[child]["path"] = root_length[parent]["path"] + [child]
                     if child not in queue:
                         queue.append(child)
     return root_length
+
+
+def check_positive_weight(graph):
+    for v in graph.graph:
+        for w in graph.graph[v].values():
+            assert w >= 0, "Input Dijkstra's algorithm only positive weights"
 
 
 if __name__ == "__main__":
@@ -127,5 +140,5 @@ if __name__ == "__main__":
 
     graph_weight = Graph(oriented=True, weighed=True)
     graph_weight.graph_from_string(input_string)
-    find_length_for_A_weight = calc_algo_dijkstra_weights(graph_weight,"A")
+    find_length_for_A_weight = calc_algo_dijkstra_weights(graph_weight, "A", save_path=True)
     print(f"find_length_for_A_weight : {find_length_for_A_weight}")
