@@ -9,11 +9,11 @@
 """
 import pytest
 from mipt_lections.mipt_lections.graph.graph import Graph
-from mipt_lections.mipt_lections.graph.algo_Kosaraju_connected_components import *
-from mipt_lections.mipt_lections.graph.algo_Tarjan_sort_vertexes import *
-from mipt_lections.mipt_lections.graph.numbering_vertex import *
-from mipt_lections.mipt_lections.graph.algo_Dijkstra_find_min_path import *
-from mipt_lections.mipt_lections.graph.algo_Floyd_Warshall_find_min_path import *
+from mipt_lections.mipt_lections.graph.algo_Kosaraju_connected_components import calc_kosaraju
+from mipt_lections.mipt_lections.graph.algo_Tarjan_sort_vertexes import calc_tarjan
+from mipt_lections.mipt_lections.graph.numbering_vertex import calc_numbering_vertex
+from mipt_lections.mipt_lections.graph.algo_Dijkstra_find_min_path import calc_algo_dijkstra, calc_algo_dijkstra_weights
+from mipt_lections.mipt_lections.graph.algo_Floyd_Warshall_find_min_path import calc_algo_floyd_warshall
 
 
 def test_graph_algo_kosaraju():
@@ -99,9 +99,9 @@ def test_graph_algo_dijkstra_weight():
     graph_weight.graph_from_string(string)
 
     # Проверка с конкретно заданной вершиной и с парметром сохранения пути (save_path=True)
-    find_length_for_A_weight = calc_algo_dijkstra_weights(graph_weight,"A")
+    find_length_for_A_weight = calc_algo_dijkstra_weights(graph_weight,"A", save_path=True)
     print(f"find_length_for_A_weight : {find_length_for_A_weight}")
-    assert find_length_for_A_weight == {'A': {'len': 0, 'path': ['A']}, 'B': {'len': 1.0, 'path': ['A', 'B']}, 'C': {'len': 2.0, 'path': ['A', 'C']}, 'D': {'len': 4.0, 'path': ['A', 'B', 'D']}}
+    assert find_length_for_A_weight == {'A': {'len': 0, 'path': []}, 'B': {'len': 1.0, 'path': ['B']}, 'C': {'len': 2.0, 'path': ['C']}, 'D': {'len': 4.0, 'path': ['B', 'D']}}
 
 
 def test_graph_algo_floyd_warshall():
