@@ -9,6 +9,7 @@
 - [LinkedList (Односвязный список)](hash/linkedlist.py)
 - [Hash (Hash-таблица)](hash/hash.py)
 - [Graph (Граф)](graph/graph.py)
+- [BinaryTree (Двоичное дерево поиска)](graph/binary_search_tree.py)
 
 Алгоритмы:
 - [Алгоритмы сортировки](sorting/)
