@@ -9,6 +9,7 @@
 - [LinkedList (Односвязный список)](mipt_lections/hash/linkedlist.py)
 - [Hash (Hash-таблица)](mipt_lections/hash/hash.py)
 - [Graph (Граф)](mipt_lections/graph/graph.py)
+- [BinaryTree (Двоичное дерево поиска)](mipt_lections/graph/binary_search_tree.py)
 
 Алгоритмы:
 - [Алгоритмы сортировки](mipt_lections/sorting) 
