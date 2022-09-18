@@ -23,7 +23,9 @@
 - [Ханойская башня](mipt_lections/hanoi_towers.py)
 - [Бинарный поиск элемента в массиве](mipt_lections/binary_search.py)
 - [Редакционное расстояния между строками (Расстояние Левенштейна)](mipt_lections/compare_words.py)
-- Задача по укладке рюкзака
+- [Задача по укладке рюкзака](mipt_lections/knapsack_problem.py)
+- [Поиск совпадающей подпоследовательности в массивах](mipt_lections/compare_array.py)
+- [Проверка скобочной последовательности + польская нотация](mipt_lections/tags.py)
 
 - Алгоритмы по работе с графами:
     - [Алгоритм Косарайю (DFS). Поиск компонент сильной связности](mipt_lections/graph/algo_Kosaraju_connected_components.py)

@@ -18,7 +18,9 @@ def compare_arrays(a: list, b: list):
                     max_seq = seq
     return max_seq
 
-a = [1, 2, 3, 4, 5, 6, 7]
-b = [3, 5, 6, 7, 4]
-res = compare_arrays(a, b)
-print(res)
+
+if __name__ == "__main__":
+    a = [1, 2, 3, 4, 5, 6, 7]
+    b = [3, 5, 6, 7, 4]
+    res = compare_arrays(a, b)
+    print(res)
