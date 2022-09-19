@@ -2,20 +2,7 @@
 1028. Recover a Tree From Preorder Traversal
 (1028. Восстановить дерево из обхода предварительного заказа)
 https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/
-
-
-Input: traversal = "1-2--3--4-5--6--7"
-Output: [1,2,5,3,4,6,7]
-
-
-Input: traversal = "1-2--3---4-5--6---7"
-Output: [1,2,5,3,null,6,null,4,null,7]
-
-
 """
-# TODO add comments
-# TODO translate RUS->ENG
-
 
 import re  # Import regular expression
 from collections import deque  # Import deque
@@ -43,7 +30,7 @@ class Solution:
             stack.append(tree_node)
 
         root_node = parent_node = stack.pop(0)
-        self.levels = 0 # For visualization Dont use in solution
+        self.levels = 0  # For visualization Dont use in solution
 
         while stack:
             node = stack.pop(0)
@@ -106,11 +93,11 @@ if __name__ == "__main__":
     traversal = "1-401--349---90--88"
 
     from line_profiler import LineProfiler
+
     lp = LineProfiler()
     lp_wrapper = lp(Solution().recoverFromPreorder)
     output_graph = lp_wrapper(traversal)
     lp.print_stats()
-
 
     output_graph = solution.recoverFromPreorder(traversal)
     print(f"output_graph: {output_graph}")
