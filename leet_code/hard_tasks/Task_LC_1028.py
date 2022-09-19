@@ -92,12 +92,12 @@ if __name__ == "__main__":
     traversal = "1-2--3---4-5--6---7"
     traversal = "1-401--349---90--88"
 
-    from line_profiler import LineProfiler
-
-    lp = LineProfiler()
-    lp_wrapper = lp(Solution().recoverFromPreorder)
-    output_graph = lp_wrapper(traversal)
-    lp.print_stats()
-
     output_graph = solution.recoverFromPreorder(traversal)
     print(f"output_graph: {output_graph}")
+
+    # Profiling
+    # from line_profiler import LineProfiler
+    # lp = LineProfiler()
+    # lp_wrapper = lp(Solution().recoverFromPreorder)
+    # output_graph = lp_wrapper(traversal)
+    # lp.print_stats()
