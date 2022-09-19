@@ -6,6 +6,9 @@ https://leetcode.com
     https://leetcode.com/problems/valid-number/submissions/
     Действительный номер
 
+### [**1028.** Recover a Tree From Preorder Traversal](hard_tasks/Task_LC_1028.py) (Runtime 55%)
+    https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/submissions/
+    Восстановить дерево из обхода предварительного заказа
 
 ### [**2157.** Groups of Strings](hard_tasks/Task_LC_2157.py) (Runtime 20%)
     https://leetcode.com/problems/groups-of-strings/submissions/

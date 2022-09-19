@@ -31,12 +31,11 @@ class TreeNode:
 
 class Solution:
     def recoverFromPreorder(self, traversal: str):
-        find_substr = re.findall(r'(-*\d+)', traversal)
+        find_substr = re.findall(r'(-*)(\d+)', traversal)
         stack = []
-        for i in range(len(find_substr)):
-            node = find_substr[i]
-            value = int(re.findall(r'(\d+)', node)[0])
-            level = node.count("-")
+        for l, num in find_substr:
+            value = int(num)
+            level = len(l)
             tree_node = TreeNode(val=value)
             # Add instance TreeNode attributes: parent and level
             tree_node.parent = None
@@ -44,7 +43,7 @@ class Solution:
             stack.append(tree_node)
 
         root_node = parent_node = stack.pop(0)
-        self.levels = 0
+        self.levels = 0 # For visualization Dont use in solution
 
         while stack:
             node = stack.pop(0)
@@ -61,10 +60,10 @@ class Solution:
                 parent_node.right = node
             node.parent = parent_node
             parent_node = node
-            # Update max level
+            # Update max level. For visualization Dont use in solution
             if node.level > self.levels:
                 self.levels = node.level
-        # Visualization tree on array
+        # Visualization tree on array. For visualization Dont use in solution
         print(self.tree_to_array(root_node))
         return root_node
 
