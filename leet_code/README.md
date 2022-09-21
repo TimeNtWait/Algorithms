@@ -10,6 +10,11 @@ https://leetcode.com
     https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/submissions/
     Восстановить дерево из обхода предварительного заказа
 
+### [**1255.** Maximum Score Words Formed by Letters](hard_tasks/Task_LC_1255.py) (Runtime 31%) 
+    https://leetcode.com/problems/maximum-score-words-formed-by-letters/
+    Максимальная оценка слов, образованных буквами
+    Использовался алгоритм генерации сочетаний
+    
 ### [**2157.** Groups of Strings](hard_tasks/Task_LC_2157.py) (Runtime 20%)
     https://leetcode.com/problems/groups-of-strings/submissions/
     Группы строк:
