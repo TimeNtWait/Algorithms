@@ -73,45 +73,51 @@ class Solution:
         return maxscore
 
 
-if __name__ == "__main__":
+import pytest
+import time
+
+@pytest.mark.parametrize(
+    "words, letters, score, expected",
+    [
+        (["dog", "cat", "dad", "good"],
+         ["a", "a", "c", "d", "d", "d", "g", "o", "o"],
+         [1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         23),
+        (["xxxz", "ax", "bx", "cx"],
+         ["z", "a", "b", "c", "x", "x", "x"],
+         [4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10],
+         27),
+        (["daeagfh", "acchggghfg", "feggd", "fhdch", "dbgadcchfg", "b", "db", "fgchfe", "baaedddc"],
+         ["a", "a", "a", "a", "a", "a", "a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "c", "c", "c", "c", "c", "c",
+          "c", "c", "c", "c", "c", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "e", "e", "e",
+          "e", "e", "e", "e", "e", "e", "e", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f", "g",
+          "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "h", "h", "h", "h", "h", "h", "h", "h", "h", "h", "h",
+          "h", "h"],
+         [2, 1, 9, 2, 10, 5, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         298),
+        (["ad", "dbacbbedc", "ae", "adbdacad", "dcdecacdcb", "ddbba", "dbcdbeaade", "aeccdcb", "bce"],
+         ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "b", "b", "b", "b", "b", "b", "b", "b", "b",
+          "b", "b", "b", "b", "b", "b", "b", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c", "d", "d",
+          "d", "d", "e", "e", "e", "e", "e", "e"],
+         [1, 8, 3, 1, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         102),
+        (["cadedaecb", "dccadce", "eee", "dda", "dceeadd", "abe", "adea", "aec", "aecdbecbbe"],
+         ["a", "a", "a", "a", "a", "b", "b", "b", "b", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "d", "d",
+          "d", "d", "d", "d", "d", "e", "e", "e", "e", "e", "e"],
+         [7, 1, 3, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         86),
+    ]
+
+)
+def test_maxScoreWords(words, letters, score, expected):
+    print("\nexpected:", expected)
+    start_time = time.time()
     solution = Solution()
-    # words = ["dog", "cat", "dad", "good"]
-    # letters = ["a", "a", "c", "d", "d", "d", "g", "o", "o"]
-    # score = [1, 0, 9, 5, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    # # Output: 23
-
-    # words = ["leetcode"]
-    # letters = ["l", "e", "t", "e", "o", "d"]
-    # score = [0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-    # # Output: 0
-    #
-    # words = ["xxxz", "ax", "bx", "cx"]
-    # letters = ["z", "a", "b", "c", "x", "x", "x"]
-    # score = [4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10]
-    # # Output: 27
-    # #
-    # words = ["daeagfh", "acchggghfg", "feggd", "fhdch", "dbgadcchfg", "b", "db", "fgchfe", "baaedddc"]
-    # letters = ["a", "a", "a", "a", "a", "a", "a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "c", "c", "c", "c", "c",
-    #            "c", "c", "c", "c", "c", "c", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "d", "e",
-    #            "e", "e", "e", "e", "e", "e", "e", "e", "e", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f", "f",
-    #            "f", "f", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "g", "h", "h", "h", "h", "h", "h", "h",
-    #            "h", "h", "h", "h", "h", "h"]
-    # score = [2, 1, 9, 2, 10, 5, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    # # Output: 298
-    #
-    # words = ["ad", "dbacbbedc", "ae", "adbdacad", "dcdecacdcb", "ddbba", "dbcdbeaade", "aeccdcb", "bce"]
-    # letters = ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "b", "b", "b", "b", "b", "b", "b", "b", "b",
-    #            "b", "b", "b", "b", "b", "b", "b", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c", "d", "d",
-    #            "d", "d", "e", "e", "e", "e", "e", "e"]
-    # score = [1, 8, 3, 1, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    # # Output: 102
-
-    words = ["cadedaecb", "dccadce", "eee", "dda", "dceeadd", "abe", "adea", "aec", "aecdbecbbe"]
-    letters = ["a", "a", "a", "a", "a", "b", "b", "b", "b", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "d", "d",
-               "d", "d",
-               "d", "d", "d", "e", "e", "e", "e", "e", "e"]
-    score = [7, 1, 3, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    # Output: 86
-    
     maxscore = solution.maxScoreWords(words, letters, score)
     print(f"maxscore: {maxscore}")
+    print(f"time : {time.time() - start_time}")
+    assert maxscore == expected
+
+
+if __name__ == '__main__':
+    pytest.main(args=[__file__])
