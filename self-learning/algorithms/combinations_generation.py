@@ -20,8 +20,8 @@ def combinations(a: list[int], k: int):
 
 
 if __name__ == "__main__":
-    a = [0, 1, 2, 3, 4]
-
+    n = 5
+    a = list(range(n))
     for k in range(1, len(a) + 1):
         k_combinations = combinations(a, k)
-        print(f"Combinations for k={k}: {k_combinations}")
+        print(f"Combinations N={n} for k={k}: {k_combinations}")
