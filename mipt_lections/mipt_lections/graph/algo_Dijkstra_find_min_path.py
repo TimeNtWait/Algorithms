@@ -37,7 +37,7 @@ def calc_algo_dijkstra(graph: Graph, root_vertex: str = None, save_path: bool = 
         root_vertexes = [root_vertex]
     else:
         root_vertexes = graph.find_root_vertex()
-        # Если корневые вершины не определены, тогда анализщируются все вершины
+        # Если корневые вершины не определены, тогда анализируются все вершины
         if len(root_vertexes) == 0:
             root_vertexes = graph.graph.keys()
     root_length = {}
