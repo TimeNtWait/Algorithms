@@ -1,5 +1,5 @@
 """52. N-Queens II
-(52 . N-Королевы II)
+(52 . Расстановка N ферзей на поле N*N)
 https://leetcode.com/problems/n-queens-ii
 """
 

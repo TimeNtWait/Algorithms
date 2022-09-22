@@ -3,6 +3,11 @@ https://leetcode.com
 
 ## Hard Tasks 
 
+
+### [**51.** N-Queens](hard_tasks/Task_LC_51.py) (faster than 24%) 
+    https://leetcode.com/problems/n-queens
+    Расстановка N ферзей на поле N*N
+
 ### [**52.** N-Queens II](hard_tasks/Task_LC_52.py) (Memory usage less than: 80% faster than 10%) 
     https://leetcode.com/problems/n-queens-ii
     Расстановка N ферзей на поле N*N
