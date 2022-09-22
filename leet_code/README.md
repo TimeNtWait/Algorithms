@@ -2,6 +2,11 @@
 https://leetcode.com
 
 ## Hard Tasks 
+
+### [**52.** N-Queens II](hard_tasks/Task_LC_52.py) (Memory usage less than: 80% faster than 10%) 
+    https://leetcode.com/problems/n-queens-ii
+    Расстановка N ферзей на поле N*N
+
 ### [**65.** Valid Number](hard_tasks/Task_LC_65.py) (faster than 98.8%)
     https://leetcode.com/problems/valid-number/submissions/
     Действительный номер
