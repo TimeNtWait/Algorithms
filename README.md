@@ -23,3 +23,6 @@
 - [Yandex ML Contest 2022](../../../Yandex_Contest/tree/main/ML_Contest_2022)
 - [Yandex Algorithms 1.0](../../../Yandex_Contest/tree/main/Yandex_Algorithms_1_0)
 - [Yandex Algorithms 3.0](../../../Yandex_Contest/tree/main/Yandex_Algorithms_3_0)
+***
+## 3. [Решение задач Тинькофф Контест](../../../Tinkoff_Algorithms):
+- [Tinkoff Algorithms](../../../Tinkoff_Algorithms)
