@@ -18,8 +18,8 @@
 - [Hard Tasks](leet_code/hard_tasks)
 - [Medum Tasks](leet_code/medium_tasks) 
 
-## 3. [Решение задач с Yandex Contest](../../Yandex_Contest):
-- [Yandex ML Contest 2021](../../Yandex_Contest/ML_Contest_2021)
-- [Yandex ML Contest 2022](../../Yandex_Contest/ML_Contest_2022)
-- [Yandex Algorithms 1.0](../../Yandex_Contest/Yandex_Algorithms_1_0)
-- [Yandex Algorithms 3.0](../../Yandex_Contest/Yandex_Algorithms_3_0)
+## 3. [Решение задач с Yandex Contest](../../../Yandex_Contest):
+- [Yandex ML Contest 2021](../../../Yandex_Contest/ML_Contest_2021)
+- [Yandex ML Contest 2022](../../../Yandex_Contest/ML_Contest_2022)
+- [Yandex Algorithms 1.0](../../../Yandex_Contest/Yandex_Algorithms_1_0)
+- [Yandex Algorithms 3.0](../../../Yandex_Contest/Yandex_Algorithms_3_0)
