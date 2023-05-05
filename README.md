@@ -12,12 +12,12 @@
 - [Тесты](mipt_lections/tests):
     - Pytest для всего кода
     - Doctest (для классов [Heap](mipt_lections/mipt_lections/heap), [Stack](mipt_lections/mipt_lections/stack))
-
+***
 ## 2. [Решение алгоритмических задач](leet_code) LeetCode (https://leetcode.com):
 - [All Tasks](leet_code/)
 - [Hard Tasks](leet_code/hard_tasks)
 - [Medum Tasks](leet_code/medium_tasks) 
-
+***
 ## 3. [Решение задач с Yandex Contest](../../../Yandex_Contest):
 - [Yandex ML Contest 2021](../../../Yandex_Contest/ML_Contest_2021)
 - [Yandex ML Contest 2022](../../../Yandex_Contest/ML_Contest_2022)
